@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void bfs(int src,int dis,vector<int> &dist,vector<vector<int>> &ar,vector<int> &vis){
+void bfs(int src, vector<int> &dist, vector<vector<int>> &ar, vector<int> &vis){
 
     vis[src] = 1;
     dist[src] = 0;
@@ -42,7 +42,8 @@ int main(){
         }
         vector<int> dist(n+1,0);
         vector<int> vis(n+1,0);
-        bfs(1,0,dist,ar,vis);
+        
+        bfs(1, dist, ar, vis);
 
         cout << dist[n] << endl;
     }
