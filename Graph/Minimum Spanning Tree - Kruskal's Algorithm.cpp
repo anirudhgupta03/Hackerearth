@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 using namespace std;
 
 bool cmp(pair<pair<int,int>,int> p1, pair<pair<int,int>,int> p2){
@@ -43,7 +43,7 @@ int main(){
     sort(v.begin(),v.end(),cmp);
 
     
-    int count = 0, wt = 0;
+    int wt = 0;
 
     for(int i = 0; i < v.size(); i++){
     
@@ -53,11 +53,7 @@ int main(){
        
         if(a != b){
             unionp(a,b, parent);
-            count++;
             wt += v[i].second;
-        }
-        if(count == n - 1){
-            break;
         }
     }
     cout << wt << endl;
