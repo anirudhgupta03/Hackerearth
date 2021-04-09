@@ -11,8 +11,6 @@ void dfs(int node, int par, vector<int> &disc, vector<int> &low, vector<int> &vi
 
 	for(int i = 0; i < al[node].size(); i++){
 		
-		children++;
-		
 		int child = al[node][i];
 
 		if(child == par) continue;
@@ -23,7 +21,8 @@ void dfs(int node, int par, vector<int> &disc, vector<int> &low, vector<int> &vi
 		else{
 
 			dfs(child, node, disc, low, vis, al, bridges, ap, timer);
-
+			children++;
+			
 			if(low[child] > disc[node]){
 
 				if(child < node){
